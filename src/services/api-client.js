@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://cloth-store-backend-phi.vercel.app/api/v1/",
+  baseURL: "https://cloth-store-backend-phi.vercel.app/api/v1",
 });
 
 apiClient.interceptors.request.use((config) => {
