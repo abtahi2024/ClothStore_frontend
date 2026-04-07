@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -19,7 +19,6 @@ import AdminRoute from "../components/AdminRoute";
 import Wishlist from "../pages/Wishlist";
 import Contact from "../pages/Contact";
 import Blogs from "../pages/Blogs";
-
 
 const AppRouters = () => {
   const [isAppLoading, setIsAppLoading] = useState(true);
