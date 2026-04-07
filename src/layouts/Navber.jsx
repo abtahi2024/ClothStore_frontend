@@ -8,7 +8,7 @@ import {
   BiX,
 } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import useAuthContext from "../hooks/useAuthContext";
 import { LogOut, Settings, UserIcon } from "lucide-react";
 import useCartContext from "../hooks/useCartContext";
@@ -17,15 +17,15 @@ const navItems = [
   { label: "Home", id: "/", href: "/" },
   { label: "Shop", id: "shop", href: "/shop" },
   { label: "Pages", id: "pages" },
-  { label: "Blog", id: "blog", href: "blogs" },
-  { label: "Contacts", id: "contacts", href: "contact" },
+  { label: "Blog", id: "blog", href: "/blogs" },
+  { label: "Contacts", id: "contacts", href: "/contact" },
 ];
 const pagesSubLinks = [
-  { name: "About Us", href: "about" },
+  { name: "About Us", href: "/about" },
   { name: "Shop Details", href: "" },
   { name: "Shopping Cart", href: "/cart" },
-  { name: "Check Out", href: "orders" },
-  { name: "Blog Details", href: "blog" },
+  { name: "Check Out", href: "/orders" },
+  { name: "Blog Details", href: "/blog" },
 ];
 
 const Navber = () => {
@@ -141,7 +141,7 @@ const Navber = () => {
                       {pagesSubLinks.map((sub) => (
                         <Link
                           key={sub.name}
-                         to={`/${sub.href}`}
+                          to={sub.href}
                           className="px-6 py-3 text-[13px] text-gray-400 hover:text-white hover:pl-8 transition-all duration-300 font-bold tracking-wider uppercase"
                         >
                           {sub.name}
@@ -311,14 +311,14 @@ const Navber = () => {
                       ${isMobilePagesOpen ? "max-h-80 mt-6 opacity-100" : "max-h-0 opacity-0"}`}
                     >
                       {pagesSubLinks.map((sub) => (
-                        <a
+                        <Link
                           key={sub.name}
                           href={sub.href}
                           className="text-[15px] font-bold text-gray-500 uppercase tracking-widest hover:text-red-600 transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {sub.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
