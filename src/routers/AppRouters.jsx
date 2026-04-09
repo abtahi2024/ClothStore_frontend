@@ -45,7 +45,7 @@ const AppRouters = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="shop" element={<Shop />} />
           <Route path="login" element={<Login />} />
-          <Route path="activate/:uid/:token" element={<ActivateAccount />} />
+          <Route path="/activate/:uid/:token" element={<ActivateAccount />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route
             path="password/reset/confirm/:uid/:token"
