@@ -41,24 +41,24 @@ const AppRouters = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/activate/:uid/:token" element={<ActivateAccount />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route
             path="password/reset/confirm/:uid/:token"
             element={<ResetPasswordConfirm />}
           />
-          <Route path="shop/:productID" element={<ProductDetails />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="wishlist" element={<Wishlist />} />
-          <Route path="blogs" element={<Blogs />} />
+          <Route path="/shop/:productID" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Route>
         <Route
-          path="deshboard"
+          path="/deshboard"
           element={
             <AdminRoute>
               <Deshboard />
@@ -66,7 +66,7 @@ const AppRouters = () => {
           }
         />
         <Route
-          path="profile"
+          path="/profile"
           element={
             <PrivateRoute>
               <Profile />
