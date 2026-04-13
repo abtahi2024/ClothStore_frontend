@@ -51,7 +51,7 @@ const AppRouters = () => {
             path="password/reset/confirm/:uid/:token"
             element={<ResetPasswordConfirm />}
           />
-          <Route path="shop/:productID" element={<ProductDetails />} />
+          <Route path="products/:productID" element={<ProductDetails />} />
           <Route path="cart" element={<Cart />} />
           <Route path="orders" element={<Orders />} />
           <Route path="wishlist" element={<Wishlist />} />

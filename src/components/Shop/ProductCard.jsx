@@ -47,7 +47,7 @@ const ProductCard = ({ p, addToWishlist, wishlist, removeWishlist }) => {
       </div>
 
       <div className="space-y-2">
-        <Link to={`/shop/${p.id}`}>
+        <Link to={`/products/${p.id}`}>
           <button className="hover:text-red-600 text-sm font-bold hover:opacity-70 transition-opacity flex items-center gap-1">
             + Add To Cart
           </button>
