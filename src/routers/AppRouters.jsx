@@ -21,20 +21,20 @@ import Contact from "../pages/Contact";
 import Blogs from "../pages/Blogs";
 
 const AppRouters = () => {
-  const [isAppLoading, setIsAppLoading] = useState(true);
+  // const [isAppLoading, setIsAppLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate initial app loading
-    const timer = setTimeout(() => {
-      setIsAppLoading(false);
-    }, 2000); // 2 sec loader
+  // useEffect(() => {
+  //   // Simulate initial app loading
+  //   const timer = setTimeout(() => {
+  //     setIsAppLoading(false);
+  //   }, 2000); // 2 sec loader
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (isAppLoading) {
-    return <Loader />;
-  }
+  // if (isAppLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <>
